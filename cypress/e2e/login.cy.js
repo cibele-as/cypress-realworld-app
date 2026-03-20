@@ -3,7 +3,7 @@ import LoginPage from '../../pages/loginPage'
 const login = new LoginPage()
 
 describe('RealWorld App', () => {
-    it.only('Login Successfully', () => {
+    it('Login Successfully', () => {
       // adjust the pattern to match your app's login endpoint (inspect in DevTools Network)
          cy.intercept('POST', '**/login').as('loginRequest')
 
@@ -16,16 +16,17 @@ describe('RealWorld App', () => {
     })
 
 
-    it.only('Login Unsuccessfully', () => {
+    it('Login Unsuccessfully', () => {
         login.accessLoginPage()
         login.loginWithCredentials('admin', '1234')
         login.checkWrongCredentialsError()     
 
     })
 
-    it.only('Login with empty fields', () => {
+    it ('Login with empty fields', () => {
         login.accessLoginPage()
         login.checkEmptyFieldsError() 
+        
         
     })
  })

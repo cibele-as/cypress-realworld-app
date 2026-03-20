@@ -8,7 +8,7 @@
       passwordField: '[name="password"]',
       loginButton: '[data-test="signin-submit"]',
       wrongCredentialsError: '[data-test="signin-error"]',
-      
+      emptyFieldError: 'input[aria-invalid="true"]'
   }
 
   return selectors
@@ -25,6 +25,7 @@
   cy.get(this.selectorsList().usernameField).type(username)
   cy.get(this.selectorsList().passwordField).type(password)
   cy.get(this.selectorsList().loginButton).click()
+  
 
  }
 // Check wrong credentials error
@@ -35,8 +36,8 @@
  //Check empty fields error
  checkEmptyFieldsError() {
   cy.get(this.selectorsList().loginButton).click()
- }
-
+  cy.get(this.selectorsList().emptyFieldError).should('be.visible')
+  }
  
 }
 
