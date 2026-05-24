@@ -18,17 +18,17 @@ class LoginPage {
   }
 
   beforeEach() {
-     cy.clearCookies();
-     cy.clearLocalStorage();
+    cy.clearCookies();
+    cy.clearLocalStorage();
   };
-  
+
   accessLoginPage() {
     cy.visit("http://localhost:3003/signin");
   }
-  
- // Check login success credentials
+
+  // Check login success credentials
   loginWithCredentials(username, password) {
-     //expect(username, "username não pode estar vazio").to.not.be.empty;
+    //expect(username, "username não pode estar vazio").to.not.be.empty;
     //expect(password, "password não pode estar vazio").to.not.be.empty;
 
     cy.get(this.selectorsList().usernameField).type("carla1234");
@@ -36,24 +36,24 @@ class LoginPage {
     cy.get(this.selectorsList().loginButton).click();
 
   }
-  
-   checkLoginSuccess() {
+
+  checkLoginSuccess() {
     cy.get(this.selectorsList().getStartModal).should("be.visible");
   }
 
   // Check login New user with valid credentials
 
-    loginWithNewUserCredentials(username, password) {
+  loginWithNewUserCredentials(username, password) {
     cy.get(this.selectorsList().usernameField).type("carlos123");
     cy.get(this.selectorsList().passwordField).type("123456");
     cy.get(this.selectorsList().loginButton).click();
 
-    }
-  
-   checkLoginSuccess() {
+  }
+
+  checkLoginSuccess() {
     cy.get(this.selectorsList().getStartModal).should("be.visible");
   }
-   
+
 
   // Check wrong credentials error
   checkWrongCredentialsError() {
@@ -69,17 +69,17 @@ class LoginPage {
 
   // Add new user with valid credentials
   addNewUser(firstName, lastname, username, password, confirmPassword) {
-        cy.get(this.selectorsList().signupLink).click();
-        cy.get (this.selectorsList().signupForm).should("be.visible");
-        cy.get('#firstName').type(firstName);
-        cy.get('#lastName').type(lastname);
-        cy.get('#username').type(username);
-        cy.get('#password').type(password);
-        cy.get('#confirmPassword').type(confirmPassword);
-        cy.get('[data-test="signup-submit"]').click();
+    cy.get(this.selectorsList().signupLink).click();
+    cy.get(this.selectorsList().signupForm).should("be.visible");
+    cy.get('#firstName').type(firstName);
+    cy.get('#lastName').type(lastname);
+    cy.get('#username').type(username);
+    cy.get('#password').type(password);
+    cy.get('#confirmPassword').type(confirmPassword);
+    cy.get('[data-test="signup-submit"]').click();
 
-      }
-      
+  }
+
 }
 
 export default LoginPage; // export default LoginpAGE
