@@ -9,10 +9,12 @@ describe("RealWorld App", () => {
     cy.intercept("POST", "**/login").as("loginRequest");
 
     login.accessLoginPage();
-    login.loginWithCredentials("ana123", "1234");
+    login.loginWithCredentials("carla1234", "12345");
 
     // wait for dashboard to load after login
     cy.wait('@loginRequest').its('response.statusCode').should('eq',200)
+
+    window.location.href.includes("dashboard").should("be.true");
 
   });
 

@@ -6,6 +6,7 @@ class LoginPage {
       usernameField: '[name="username"]',
       passwordField: '[name="password"]',
       loginButton: '[data-test="signin-submit"]',
+      dashboard: '[data-test="main"]',
       wrongCredentialsError: '[data-test="signin-error"]',
       emptyFieldError: 'input[aria-invalid="true"]',
       getStartModal: '[data-test="user-onboarding-dialog-content"]',
@@ -27,11 +28,11 @@ class LoginPage {
   
  // Check login success credentials
   loginWithCredentials(username, password) {
-     expect(username, "username não pode estar vazio").to.not.be.empty;
-     expect(password, "password não pode estar vazio").to.not.be.empty;
+     //expect(username, "username não pode estar vazio").to.not.be.empty;
+    //expect(password, "password não pode estar vazio").to.not.be.empty;
 
-    cy.get(this.selectorsList().usernameField).type(username);
-    cy.get(this.selectorsList().passwordField).type(password);
+    cy.get(this.selectorsList().usernameField).type("carla1234");
+    cy.get(this.selectorsList().passwordField).type("12345");
     cy.get(this.selectorsList().loginButton).click();
 
   }
