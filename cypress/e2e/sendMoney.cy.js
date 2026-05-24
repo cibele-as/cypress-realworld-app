@@ -15,7 +15,7 @@ describe('Send Money with sufficient amount', () => {
 
        sendMoney.sendMoney(); // call the send money function to the transfer
     
-        cy.wait('@createTransaction').its('response.statusCode').should('eq',200) // wait for the transaction be created and checl the response status
+        cy.wait('@createTransaction').its('response.statusCode').should('eq',200) // wait for the transaction be created and check the response status
        
 
     });

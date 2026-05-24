@@ -11,7 +11,7 @@
       "phoneNumber": "398-225-9900",
       "avatar": "https://avatars.dicebear.com/api/human/uBmeaz5pX.svg",
       "defaultPrivacyLevel": "public",
-      "balance": 180953,
+      "balance": 185953,
       "createdAt": "2023-03-09T22:26:40.101Z",
       "modifiedAt": "2024-03-07T10:07:57.580Z"
     },
@@ -41,7 +41,7 @@
       "phoneNumber": "887-309-1593",
       "avatar": "https://avatars.dicebear.com/api/human/_XblMqbuoP.svg",
       "defaultPrivacyLevel": "contacts",
-      "balance": 1258880,
+      "balance": 1358880,
       "createdAt": "2023-05-21T05:01:54.594Z",
       "modifiedAt": "2024-03-07T14:11:52.161Z"
     },
@@ -85,6 +85,17 @@
       "balance": 0,
       "createdAt": "2026-05-24T10:58:50.337Z",
       "modifiedAt": "2026-05-24T10:58:50.337Z"
+    },
+    {
+      "id": "DradSwHs4",
+      "uuid": "a5076b21-16aa-4004-a642-2561eec1501a",
+      "firstName": "Carlos",
+      "lastName": "Test",
+      "username": "carlos123",
+      "password": "$2a$10$ewLe5CqTnjSPVDOu8BA8ru7ZWjj3kDgbXaJjWk5kdv9RRidcr0LFe",
+      "balance": 0,
+      "createdAt": "2026-05-24T13:58:48.690Z",
+      "modifiedAt": "2026-05-24T13:58:48.690Z"
     }
   ],
   "contacts": [
@@ -275,6 +286,17 @@
       "isDeleted": false,
       "createdAt": "2026-05-24T10:59:42.075Z",
       "modifiedAt": "2026-05-24T10:59:42.075Z"
+    },
+    {
+      "id": "Q6LdAwyod",
+      "uuid": "100e22f1-d3b9-46bb-90d7-5ee20409ca9f",
+      "userId": "DradSwHs4",
+      "bankName": "Bank Test - bradesco",
+      "accountNumber": "1234567890",
+      "routingNumber": "021000021",
+      "isDeleted": false,
+      "createdAt": "2026-05-24T13:59:09.520Z",
+      "modifiedAt": "2026-05-24T13:59:09.520Z"
     }
   ],
   "transactions": [
@@ -9988,6 +10010,28 @@
       "status": "complete",
       "createdAt": "2026-05-24T12:45:59.145Z",
       "modifiedAt": "2026-05-24T12:45:59.145Z"
+    },
+    {
+      "id": "rKiUuBwDA",
+      "uuid": "855af2d8-762e-43ad-8931-ff5ccc8729bc",
+      "amount": 5000,
+      "description": "Test transfer",
+      "receiverId": "uBmeaz5pX",
+      "senderId": "ru8z6X7cV",
+      "status": "complete",
+      "createdAt": "2026-05-24T13:06:32.602Z",
+      "modifiedAt": "2026-05-24T13:06:32.602Z"
+    },
+    {
+      "id": "JNdHq8jN6",
+      "uuid": "4eb7456c-76e1-483a-bf81-a4fedf0913bc",
+      "amount": 100000,
+      "description": "Test transfer insufficient amount",
+      "receiverId": "_XblMqbuoP",
+      "senderId": "ru8z6X7cV",
+      "status": "complete",
+      "createdAt": "2026-05-24T13:06:34.497Z",
+      "modifiedAt": "2026-05-24T13:06:34.497Z"
     }
   ],
   "likes": [
@@ -10664,6 +10708,26 @@
       "isRead": false,
       "createdAt": "2026-05-24T12:45:59.154Z",
       "modifiedAt": "2026-05-24T12:45:59.154Z"
+    },
+    {
+      "id": "V5Jyxuua89",
+      "uuid": "9069b1d9-7cf6-407e-814b-30f6f139031e",
+      "userId": "uBmeaz5pX",
+      "transactionId": "rKiUuBwDA",
+      "status": "received",
+      "isRead": false,
+      "createdAt": "2026-05-24T13:06:32.613Z",
+      "modifiedAt": "2026-05-24T13:06:32.613Z"
+    },
+    {
+      "id": "Q_rDR_4N3b",
+      "uuid": "2fd077e1-0713-4eef-ae50-9a3a9fc6ca88",
+      "userId": "_XblMqbuoP",
+      "transactionId": "JNdHq8jN6",
+      "status": "received",
+      "isRead": false,
+      "createdAt": "2026-05-24T13:06:34.504Z",
+      "modifiedAt": "2026-05-24T13:06:34.504Z"
     }
   ],
   "banktransfers": [
@@ -11306,6 +11370,26 @@
       "type": "withdrawal",
       "createdAt": "2026-05-24T12:45:59.147Z",
       "modifiedAt": "2026-05-24T12:45:59.147Z"
+    },
+    {
+      "id": "P4-WoE1ahw",
+      "uuid": "39084084-7cd7-4f23-9a0c-135759ca98ab",
+      "userId": "ru8z6X7cV",
+      "amount": 5000,
+      "transactionId": "rKiUuBwDA",
+      "type": "withdrawal",
+      "createdAt": "2026-05-24T13:06:32.606Z",
+      "modifiedAt": "2026-05-24T13:06:32.606Z"
+    },
+    {
+      "id": "GBDWPC0Fbc",
+      "uuid": "5f9df18d-89f0-44c9-a927-65bcdbb05e72",
+      "userId": "ru8z6X7cV",
+      "amount": 100000,
+      "transactionId": "JNdHq8jN6",
+      "type": "withdrawal",
+      "createdAt": "2026-05-24T13:06:34.498Z",
+      "modifiedAt": "2026-05-24T13:06:34.498Z"
     }
   ]
 }

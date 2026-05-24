@@ -36,6 +36,20 @@ class LoginPage {
     cy.get(this.selectorsList().loginButton).click();
 
   }
+  
+   checkLoginSuccess() {
+    cy.get(this.selectorsList().getStartModal).should("be.visible");
+  }
+
+  // Check login New user with valid credentials
+
+    loginWithNewUserCredentials(username, password) {
+    cy.get(this.selectorsList().usernameField).type("carlos123");
+    cy.get(this.selectorsList().passwordField).type("123456");
+    cy.get(this.selectorsList().loginButton).click();
+
+    }
+  
    checkLoginSuccess() {
     cy.get(this.selectorsList().getStartModal).should("be.visible");
   }
